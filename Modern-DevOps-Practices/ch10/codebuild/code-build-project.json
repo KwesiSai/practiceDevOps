@@ -1,0 +1,43 @@
+{
+  "name": "flask-app",
+  "source": {
+    "type": "CODECOMMIT",
+    "location": "[YOUR_CODECOMMIT_HTTP_REPO_CLONE_URL]"
+  },
+  "artifacts": {
+    "type": "NO_ARTIFACTS"
+  },
+  "environment": {
+    "type": "LINUX_CONTAINER",
+    "image": "aws/codebuild/standard:4.0",
+    "computeType": "BUILD_GENERAL1_SMALL",
+    "environmentVariables": [
+      {
+        "name": "AWS_DEFAULT_REGION",
+        "value": "[YOUR_AWS_DEFAULT_REGION]"
+      },
+      {
+        "name": "AWS_ACCOUNT_ID",
+        "value": "[YOUR_AWS_ACCOUNT_ID]"
+      },
+      {
+        "name": "DOCKER_USER",
+        "value": "[YOUR_DOCKER_USER]"
+      },
+      {
+        "name": "DOCKER_PASSWORD",
+        "value": "[YOUR_DOCKER_PASSWORD]"
+      },
+      {
+        "name": "IMAGE_REPO_NAME",
+        "value": "[YOUR_IMAGE_REPO_NAME]"
+      },
+      {
+        "name": "IMAGE_TAG",
+        "value": "[YOUR_IMAGE_TAG]"
+      }
+    ],
+    "privilegedMode": true
+  },
+  "serviceRole": "arn:aws:iam::006739693794:role/CodeBuildServiceRole"
+}
