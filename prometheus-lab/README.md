@@ -23,29 +23,33 @@ Monitor a Docker container using Prometheus
     ```bash
     docker run -d --name webserver nginx
     ```
-5. Access prometheus on browser and run commands to load and visualize metrics
+5. Access prometheus on browser at _http://localhost:9090_ and run commands to load and visualize metrics
+```PromQL
+container_memory_usage_bytes{name="webserver"}
+node_cpu{instance="localhost:9100",job="node_exporter"}
+```
 
 ## Results
 - CAdvisor Web Interface
 ![cadvisor web interface](/prometheus-lab/Screenshots/cadvisor.png)
-*Figure 1: cAdvisor dashboard showing container metrics.
+*Figure 1: cAdvisor dashboard showing container metrics.*
 
 - Benchmark test 
 ```bash
 ab -n 100000 http://localhost:8081/
 ```
 ![benchmark test](/prometheus-lab/Screenshots/benchmarking.png)
-*Figure 2: Shell window showing benchmark test results.
+*Figure 2: Shell window showing benchmark test results.*
 
 - Container Memory Usage
 ![container memory usage bytes](/prometheus-lab/Screenshots/container_memory_usage.png)
-*Figure 3: Prometheus dashboard showing container memory usage metrics.
+*Figure 3: Prometheus dashboard showing container memory usage* metrics.
 ![graph](/prometheus-lab/Screenshots/cmu_graph.png)
-*Figure 4: Prometheus dashboard showing container memory usage graph.
+*Figure 4: Prometheus dashboard showing container memory usage graph.*
 
 - Node CPU metrics
 ![node cpu metrics](/prometheus-lab/Screenshots/node_cpu.png)
-*Figure 5: Prometheus dashboard showing node cpu metrics.
+*Figure 5: Prometheus dashboard showing node cpu metrics.*
 
 ## Learnings 
 - How Prometheus scrapes metrics
