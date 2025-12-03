@@ -25,7 +25,7 @@ Monitor a Docker container using Prometheus
 ![cadvisor web interface](/prometheus-lab/Screenshots/cadvisor.png)
 
 - Benchmark test _ab -n 100000 http://localhost:8081/_
-![benchmark test](/Screenshots/benchmarking.png)
+![benchmark test](/prometheus-lab/Screenshots/benchmarking.png)
 
 - Container Memory Usage
 ![container memory usage bytes](/prometheus-lab/Screenshots/container_memory_usage.png)
