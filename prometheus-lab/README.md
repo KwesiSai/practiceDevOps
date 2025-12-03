@@ -17,6 +17,7 @@ Monitor a Docker container using Prometheus
 3. Pull and run cadvisor container
   ```bash
   docker run -d   --name cadvisor   --privileged   --restart always   -p 8080:8080   -v /:/rootfs:ro   -v /var/run:/var/run:rw   -v /sys:/sys:ro   -v /var/lib/docker/:/var/lib/docker:ro   -v /sys/fs/cgroup:/sys/fs/cgroup:ro   gcr.io/cadvisor/cadvisor:latest
+  ```
 
 4. Pull and run nginx container
     _docker run -d --name webserver nginx_
