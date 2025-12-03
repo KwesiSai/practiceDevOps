@@ -20,7 +20,9 @@ Monitor a Docker container using Prometheus
   ```
 
 4. Pull and run nginx container
-    _docker run -d --name webserver nginx_
+    ```bash
+    docker run -d --name webserver nginx
+    ```
 5. Access prometheus on browser and run commands to load and visualize metrics
 
 ## Results
@@ -28,7 +30,10 @@ Monitor a Docker container using Prometheus
 ![cadvisor web interface](/prometheus-lab/Screenshots/cadvisor.png)
 *Figure 1: cAdvisor dashboard showing container metrics.
 
-- Benchmark test _ab -n 100000 http://localhost:8081/_
+- Benchmark test 
+```bash
+ab -n 100000 http://localhost:8081/
+```
 ![benchmark test](/prometheus-lab/Screenshots/benchmarking.png)
 *Figure 2: Shell window showing benchmark test results.
 
