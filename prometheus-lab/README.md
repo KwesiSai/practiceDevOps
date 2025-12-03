@@ -11,7 +11,7 @@ Monitor a Docker container using Prometheus
 
 ## Steps
 1. Install Prometheus
-    [prometheus_setup.sh](/Modern-DevOps-Practices/ch2/prometheus/prometheus_setup.sh)
+    [prometheus_setup.sh](./Modern-DevOps-Practices/ch2/prometheus/prometheus_setup.sh)
 2. Configure Promoetheus and Node Exporter
     [prometheus.yml](/prometheus-lab/prometheus.yml)
 3. Pull and run cadvisor container
@@ -22,17 +22,17 @@ Monitor a Docker container using Prometheus
 
 ## Results
 - CAdvisor Web Interface
-![cadvisor web interface](/prometheus-lab/Screenshots/cadvisor.png)
+![cadvisor web interface](/Screenshots/cadvisor.png)
 
 - Benchmark test _ab -n 100000 http://localhost:8081/_
 ![benchmark test](/Screenshots/benchmarking.png)
 
 - Container Memory Usage
-![container memory usage bytes](/prometheus-lab/Screenshots/container_memory_usage.png)
-![graph](/prometheus-lab/Screenshots/cmu_graph.png)
+![container memory usage bytes](/Screenshots/container_memory_usage.png)
+![graph](/Screenshots/cmu_graph.png)
 
 - Node CPU metrics
-![node cpu metrics](/prometheus-lab/Screenshots/node_cpu.png)
+![node cpu metrics](/Screenshots/node_cpu.png)
 
 ## Learnings 
 - How Prometheus scrapes metrics
